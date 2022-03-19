@@ -1,0 +1,15 @@
+*** Settings ***
+Documentation    Aqui estarão presentes todas as configurações de Setup e Teardown
+...              Essas configurações, podem ser utilizadas tanto para Suites Setup/Teardown
+...              wquanto para teste setup/teardown
+
+Resource        package.robot
+
+*** Keywords ***
+Abrir navegador
+    Open Browser        about:blank        chrome
+    Maximize Browser Window
+    Go To    http://automationpractice.com/index.php
+Fechar navegador    
+    Capture Page Screenshot
+    Close Browser
